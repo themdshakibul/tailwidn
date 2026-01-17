@@ -4,11 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Tailwind CSS Intro</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>legal solution website</title>
   </head>
   <body>
-    <section>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    </section>
+    <!-- navbar -->
+    <header class="bg-(--bg-color) container max-w-7xl mx-auto py-5">
+      <div class="flex justify-between items-center text-center py-14">
+        <!-- logo -->
+        <div>
+          <img class="" src="./images/logo2.png" alt="" />
+        </div>
+        <!-- nav links -->
+        <div class="hidden md:block">
+          <ul class="flex gap-7 text-[16px] text-shadow-amber-100">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="">
+          <button class="btn-primary">Free Consultation</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- banner text -->
+    <main class="bg-(--bg-color) container max-w-7xl mx-auto py-5">
+      <section>
+        <div class="mb-(hero-section) bg-amber-800 py-24 rounded-md">
+          <div class="sm:w-3xs text-center mx-auto">
+            <!-- banner text -->
+            <div class="flex flex-col gap-8">
+              <h1
+                class="text-7xl text-white font-secondary font-extrabold leading-18"
+              >
+                We Provide Effective Legal Solutions
+              </h1>
+              <p class="text-[16px] text-(--dark-06) font-medium">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour.
+              </p>
+            </div>
+            <!-- banner search -->
+            <div
+              class="w-2xl text-center justify-center mt-8 mx-auto flex gap-8"
+            >
+              <input
+                class="p-5 w-lg text-(--dark-04) bg-(--bg-color) rounded-md focus:outline-none"
+                type="text"
+                placeholder="Search your services"
+              />
+              <input class="btn-primary" type="button" value="Search" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
