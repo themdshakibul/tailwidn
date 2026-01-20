@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
-@theme {
+@layer utilities {
+  .inter-font {
+    font-family: "Poppins", sans-serif;
+  }
+  .eb-garamond {
+    font-family: "EB Garamond", serif;
+  }
+}
+
+:root {
   /* colors */
   --dark-04: rgba(160, 160, 160, 1);
   --dark-03: #9e9e9e;
@@ -12,46 +21,40 @@
   --btn-text: rgba(255, 255, 255, 1);
   --btn-primary: rgba(182, 140, 90, 1);
 
-  /* fonts */
-  --font-primary: "Poppins", sans-serif;
-  --font-secondary: "EB Garamond", serif;
-
   /* background */
   --bg-color: rgba(255, 255, 255, 1);
   --bg-gray: #111111;
 
   /* background image */
-  --bg-banner: url("./imge/banner.png"); 
+  --bg-banner: url("./imge/banner.png");
 }
 
 /* Base layer (global styles) */
 @layer base {
   body {
-    font-family: var(--font-primary);
+    font-family: (inter-font);
   }
 
   h1,
   h2,
   h3 {
-    font-family: var(--font-secondary);
+    font-family: (eb-garamond);
   }
 }
 
 /*  Components layer */
-@layer components {
+@layer utilities {
   .hero-section {
-    @apply mb-26;
+    margin-bottom: 104px;
   }
   .btn-primary {
-    @apply bg-(--btn-primary)
-      text-(--btn-text)
-      px-5 py-3
-      sm:px-7 sm:py-5
-      rounded-md
-      text-[14px]
-      md:text-xl
-      font-semibold
-      transition
-      hover:opacity-90;
+    background-color: (--btn-primary);
+    color: (--btn-text);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
   }
 }
